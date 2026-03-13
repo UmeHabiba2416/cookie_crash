@@ -179,7 +179,7 @@
     z-index: 10;
   }
   @keyframes scoreFloat {
-    0%   { opacity: 1; transform: translateY(0)    scale(1);   }
+    0%   { opacity: 1; transform: translateY(0) scale(1);     }
     100% { opacity: 0; transform: translateY(-60px) scale(1.4); }
   }
 
@@ -414,7 +414,6 @@
             if (marked[i][j]) hasMatch = true;
 
         if (!hasMatch) {
-          // Undo swap
           const tmp2 = grid[sr][sc]; grid[sr][sc] = grid[r][c]; grid[r][c] = tmp2;
           processingMatches = false;
           renderGrid();
@@ -458,7 +457,7 @@
     document.getElementById('score-display').textContent = '0';
     document.getElementById('timer-display').textContent = GAME_TIME;
     document.getElementById('best-display').textContent  = bestScore;
-    document.getElementById('timer-bar').style.width     = '100%';
+    document.getElementById('timer-bar').style.width      = '100%';
     document.getElementById('timer-bar').style.background = '#4ade80';
     document.getElementById('gameover-overlay').classList.remove('show');
     initGrid();
